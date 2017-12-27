@@ -11794,12 +11794,12 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Inferential-Statistic">Inferential Statistic<a class="anchor-link" href="#Inferential-Statistic">&#182;</a></h1><p>This report will investigate the <a href="https://en.wikipedia.org/wiki/Stroop_effect">Stroop Effect</a>, by attempting to answer the questions that were provided below. However, this report will based on the data provided by Udacity, which contains the text color naming duration in the two settings (congruent task <em>E1</em> and incongruent task <em>E2</em>).</p>
 <h3 id="1.-What-is-our-independent-variable?-What-is-our-dependent-variable?">1. What is our independent variable? What is our dependent variable?<a class="anchor-link" href="#1.-What-is-our-independent-variable?-What-is-our-dependent-variable?">&#182;</a></h3><p>As the data contains only the duration of each experiments; thus, the <strong>dependent variable</strong> will be the <strong>each task performance (duration to interpret the color)</strong>. In the other hand, the <strong>independent variable</strong> will be <strong>congruent/incongruent treatment (the color of the text)</strong>.</p>
-<h3 id="2.-What-is-an-appropriate-set-of-hypotheses-for-this-task?-What-kind-of-statistical-test-do-you-expect-to-perform?-Justify-your-choices.">2. What is an appropriate set of hypotheses for this task? What kind of statistical test do you expect to perform? Justify your choices.<a class="anchor-link" href="#2.-What-is-an-appropriate-set-of-hypotheses-for-this-task?-What-kind-of-statistical-test-do-you-expect-to-perform?-Justify-your-choices.">&#182;</a></h3><p>As for I want to see whether the average duration of <em>E2</em> ($\mu_2$) will be larger than average duration of <em>E1</em> ($\mu_1$), which indicating that <em>E2</em> will need longer time to be interpreted. Thus, I construct the hypotheses:</p>
+<h3 id="2.-What-is-an-appropriate-set-of-hypotheses-for-this-task?-What-kind-of-statistical-test-do-you-expect-to-perform?-Justify-your-choices.">2. What is an appropriate set of hypotheses for this task? What kind of statistical test do you expect to perform? Justify your choices.<a class="anchor-link" href="#2.-What-is-an-appropriate-set-of-hypotheses-for-this-task?-What-kind-of-statistical-test-do-you-expect-to-perform?-Justify-your-choices.">&#182;</a></h3><p>As for I want to see whether the average duration of <em>E2</em> ($\bar{x}_2$) will be larger than average duration of <em>E1</em> ($\bar{x}_1$), which indicating that <em>E2</em> will need longer time to be interpreted. Thus, I construct the hypotheses:</p>
 <p>Null Hypothesis:
-$$H_0: \mu_2-\mu_1 \leq 0$$</p>
+$$H_0: \bar{x}_2-\bar{x}_1 \leq 0$$</p>
 <p>Alternate Hypothesis:
-$$H_a: \mu_2-\mu_1 &gt; 0$$</p>
-<p>Consequently, I intend to conduct a one-tail <em>t</em> test ($\alpha = .05$) as there is no population parameters known in this case. Furthermore, as the sample is too small ($n&lt;30$), it is recommended to use t distribution (<a href="http://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_confidence_intervals/bs704_confidence_intervals_print.html">source</a>).</p>
+$$H_a: \bar{x}_2-\bar{x}_1 &gt; 0$$</p>
+<p>Consequently, I intend to conduct a one-tail t-test ($\alpha = .05$) as there is no population parameters known in this case. Furthermore, as the sample is too small ($n&lt;30$), it is recommended to use t distribution (<a href="http://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_confidence_intervals/bs704_confidence_intervals_print.html">source</a>). In detail, as the two tasks performed by the same participants; thus, it is appropriate to use dependent sample t-test</p>
 <h3 id="3.-Report-some-descriptive-statistics-regarding-this-dataset.-Include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.">3. Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability.<a class="anchor-link" href="#3.-Report-some-descriptive-statistics-regarding-this-dataset.-Include-at-least-one-measure-of-central-tendency-and-at-least-one-measure-of-variability.">&#182;</a></h3><p>Here I load the data:</p>
 
 </div>
@@ -12267,7 +12267,7 @@ $$H_a: \mu_2-\mu_1 &gt; 0$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Thus, based on the data I found the difference average or the point estimate ($\mu_d$) = 7.96 and difference standard deviation ($\sigma_d$) = 4.86. In addition, degree of freedom ($df = n - 1$) = 23.  However, due to lack of number of sample, I assume that data is normally distributed given the mean is the central value and std as the variability.</p>
+<p>Thus, based on the data I found the difference average or the point estimate ($\bar{x}_d$) = 7.96 and difference standard deviation ($\sigma_d$) = 4.86. In addition, degree of freedom ($df = n - 1$) = 23.  However, due to lack of number of sample, I assume that data is normally distributed given the mean is the central value and std as the variability.</p>
 <h3 id="4.-Provide-one-or-two-visualizations-that-show-the-distribution-of-the-sample-data.-Write-one-or-two-sentences-noting-what-you-observe-about-the-plot-or-plots.">4. Provide one or two visualizations that show the distribution of the sample data. Write one or two sentences noting what you observe about the plot or plots.<a class="anchor-link" href="#4.-Provide-one-or-two-visualizations-that-show-the-distribution-of-the-sample-data.-Write-one-or-two-sentences-noting-what-you-observe-about-the-plot-or-plots.">&#182;</a></h3><p>Below are the plot of the data:</p>
 
 </div>
@@ -12478,7 +12478,7 @@ EZEYUnIXEYmh/wcgT9vuUta6XAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As I mentioned before I assume the data are normally distributed if the sample is large enough since we have only small value of data that does not show normal distribution. Following is the plot of the data from given mean and std (<a href="https://stackoverflow.com/questions/10138085/python-pylab-plot-normal-distribution">source</a>).</p>
+<p>As I mentioned before I assume the data are normally distributed if the sample is large enough since we have only small value of data that does not show normal distribution. Following is the plot of the simple data from given mean and std (<a href="https://stackoverflow.com/questions/10138085/python-pylab-plot-normal-distribution">source</a>).</p>
 
 </div>
 </div>
@@ -12876,16 +12876,17 @@ CDMzM2uLJxFmZmbWFk8izMzMrC2eRJiZmVlbPIkwMzOztngSYWZmZm3xJMLMzMza4kmEmZmZteUf
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As seen in Duration's Curve, there are some intersection between the two curves. However, it shows the Incongruent curve have a larger variance.</p>
 <h3 id="5.-Now,-perform-the-statistical-test-and-report-your-results.-What-is-your-confidence-level-and-your-critical-statistic-value?-Do-you-reject-the-null-hypothesis-or-fail-to-reject-it?-Come-to-a-conclusion-in-terms-of-the-experiment-task.-Did-the-results-match-up-with-your-expectations?">5. Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?<a class="anchor-link" href="#5.-Now,-perform-the-statistical-test-and-report-your-results.-What-is-your-confidence-level-and-your-critical-statistic-value?-Do-you-reject-the-null-hypothesis-or-fail-to-reject-it?-Come-to-a-conclusion-in-terms-of-the-experiment-task.-Did-the-results-match-up-with-your-expectations?">&#182;</a></h3><p>Here I will perform statistical test. First, I have to find the t-statistic of the difference:
-$$t_{statistic} = \frac{\mu_d}{\frac{\sigma_d}{\sqrt{n}}}$$
-$$\mu_d = 7.96$$
+$$t_{statistic} = \frac{\bar{x}_d}{\frac{\sigma_d}{\sqrt{n}}}$$</p>
+<p>Where,
+$$\bar{x}_d = 7.96$$
 $$\sigma_d = 4.86$$
 $$n = 24$$
 $$t_{critical} = 1.714 $$</p>
 <p>Thus, 
-$$t_{statistic} = 8.02 &gt; t_{critical}$$
-Therefore, the $H_0$ is rejected because it is evident that the intervention may make performance decreasing significantly ($P_{value} = ~0.0001$) (duration to name the color of the text increasing).</p>
-<p>Furthermore, as I have defined that I am using 95% confidence. Therefore,
-$$CI: (5.90, 10.01)$$</p>
+$$t_{statistic} = \frac{7.96}{\frac{4.86}{\sqrt{24}}}$$</p>
+$$t_{statistic} = 8.02 &gt; t_{critical}$$<p>Therefore, the $H_0$ is rejected because it is evident that the intervention may make performance decreasing significantly ($P_{value} = ~0.0001$) (duration to name the color of the text increasing).</p>
+<p>Furthermore, as I have defined that I am using 95% confidence. Therefore,</p>
+$$CI: (5.90, 10.01)$$<p>Which imply that I am 95% confident that the intervention may increase the duration to interpret the colours by 5.90 seconds to 10.01 seconds.</p>
 
 </div>
 </div>
